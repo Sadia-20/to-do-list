@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="To-Do List" content="To-Do List for CN Skill Test" />
+    <link rel="stylesheet" href="styles.css">
+    <title>To-Do List App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Let's do it!<img src="To-do list.gif" alt="To-Do"> </h1>
+        <div class="actions">
+            <button id="completeAll">Complete All</button>
+            <button id="clearCompleted">Clear Completed</button>
+        </div>
+        <div class="input-container">
+            <input type="text" id="todoInput" placeholder="Add a new task">
+            <button id="addBtn" class="icon-button">
+                <img src="Add icon.png" alt="Add">
+            </button>
+            <button id="resetTasks" class="icon-button">
+            <img src="Reset icon.png" alt="Reset">
+            </button>
+        </div>
+        <input type="text" id="searchInput" placeholder="Search tasks">
+        <div class="filter-container">
+            <label for="allTasks" class="filter-label">All</label>
+            <input type="radio" id="allTasks" name="taskFilter" value="all" checked>
+            <label for="pendingTasks" class="filter-label">Pending</label>
+            <input type="radio" id="pendingTasks" name="taskFilter" value="pending">
+            <label for="completedTasks" class="filter-label">Completed</label>
+            <input type="radio" id="completedTasks" name="taskFilter" value="completed">
+        </div>
+        <div class="task-list">
+            <ul id="taskList">
+                <!-- To-do items will be added here dynamically -->
+            </ul>
+        </div>
+        <p id="taskCount">Total tasks: 0 (Completed: 0)</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

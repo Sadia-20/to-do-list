@@ -1,0 +1,254 @@
+/* Background and general styles */
+body {
+    font-family: 'Your Cute Font', cursive; /* Change 'Your Cute Font' to the desired font */
+    background-image: url('Background-To-do.jpg'); /* Replace 'Background-To-do.jpg' with the actual image file path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background to prevent scrolling */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    background-color: #fff; /* White container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #007BFF; /* Add a border */
+}
+
+h1 {
+    font-size: 24px;
+    color: #007BFF; /* Blue header text */
+    margin-bottom: 20px;
+}
+
+/* Action buttons */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    background-color: #007BFF; /* Blue buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add border and shadow to complete all and clear completed buttons */
+#completeAll,
+#clearCompleted {
+    border: 2px solid #007BFF; /* Add border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Input field and buttons */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #007BFF;
+    border-radius: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Task list styles */
+.task-list {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.task-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.task-list li.completed {
+    background-color: #E5FCC2; /* Light green for completed tasks */
+    color: #4CAF50;
+}
+
+.task-list .task-text {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.task-list .task-completed {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 8px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.task-list li.completed .task-completed {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+/* Filter radio buttons */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-label {
+    margin-right: 5px;
+    color: #333; /* Dark gray text */
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Edit button */
+.edit-btn {
+    background-image: url('Edit\ icon.webp'); /* Replace 'Edit\ icon.webp' with your actual icon image path */
+    background-repeat: no-repeat;
+    background-size: 24px 24px; /* Adjust the size as needed */
+    background-position: center;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: transparent; /* Remove background color */
+    transition: transform 0.2s ease-in-out;
+    text-indent: -9999px; /* Shift the text content off-screen */
+}
+
+.edit-btn:hover {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+
+/* Delete button */
+.delete-btn {
+    background-image: url('Delete\ icon.png'); /* Replace 'Delete\ icon.png' with your actual icon image path */
+    background-repeat: no-repeat;
+    background-size: 24px 24px; /* Adjust the size as needed */
+    background-position: center;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: transparent; /* Remove background color */
+    transition: transform 0.2s ease-in-out;
+    text-indent: -9999px; /* Shift the text content off-screen */
+}
+
+.delete-btn:hover {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+
+/* Add styles for the icon buttons */
+.icon-button {
+    background: transparent; /* Remove background color */
+    border: none;
+    cursor: pointer;
+    margin-left: 5px; /* Adjust spacing between icons and text */
+}
+
+/* Add styles for the icon images */
+.icon-button img {
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .task-list {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .actions button {
+        padding: 8px 12px;
+    }
+
+    .task-list li {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #taskCount {
+        text-align: center;
+    }
+}
