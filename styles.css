@@ -1,7 +1,7 @@
 /* Background and general styles */
 body {
-    font-family: 'Your Cute Font', cursive; /* Change 'Your Cute Font' to the desired font */
-    background-image: url('Background-To-do.jpg'); /* Replace 'Background-To-do.jpg' with the actual image file path */
+    font-family: 'Your Cute Font', cursive; 
+    background-image: url('Background-To-do.jpg'); 
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fixed background to prevent scrolling */
@@ -170,7 +170,7 @@ input[type="radio"] {
 
 /* Edit button */
 .edit-btn {
-    background-image: url('Edit\ icon.webp'); /* Replace 'Edit\ icon.webp' with your actual icon image path */
+    background-image: url('Edit\ icon.webp'); 
     background-repeat: no-repeat;
     background-size: 24px 24px; /* Adjust the size as needed */
     background-position: center;
@@ -189,7 +189,7 @@ input[type="radio"] {
 
 /* Delete button */
 .delete-btn {
-    background-image: url('Delete\ icon.png'); /* Replace 'Delete\ icon.png' with your actual icon image path */
+    background-image: url('Delete\ icon.png'); 
     background-repeat: no-repeat;
     background-size: 24px 24px; /* Adjust the size as needed */
     background-position: center;
